@@ -115,3 +115,26 @@ main {
         stroke-dashoffset: 1165;
     }
 }
+
+h2{
+    position: relative;
+}
+
+h2::after {
+    position: absolute;
+    content: "";
+    width:0%;
+    height:4px;
+    background-color: aquamarine;
+    left: 50%;
+    bottom: -10px;
+    transition: all 0.3s ease-in-out;
+}
+h2:hover {
+    cursor:pointer;
+}
+h2:hover::after {
+    width: 100%;
+    left: 0;
+    cursor: pointer;
+}
